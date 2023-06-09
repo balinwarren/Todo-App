@@ -49,28 +49,28 @@ export default class UI {
         const sideBar = document.createElement('div');
         sideBar.classList.add('side-bar');
 
-        let tabs = UI.createTabs();
-        tabs.forEach(element => sideBar.appendChild(element));
+        const inboxTab = UI.createTab('fa-inbox', 'inbox-icon', 'Inbox');
+        sideBar.appendChild(inboxTab);
 
         return sideBar;
     }
 
-    static createTabs (){
-        const inboxTab = document.createElement('div');
-        inboxTab.classList.add('tab');
+    static createTab (iconName, iconId, labelText){
+        const tab = document.createElement('div');
+        tab.classList.add('tab');
 
-        const inboxIcon = document.createElement('i');
-        inboxIcon.classList.add('fa-solid');
-        inboxIcon.classList.add('fa-inbox');
-        inboxIcon.classList.add('tab-icon');
-        inboxIcon.id = "inbox-icon";
-        inboxTab.appendChild(inboxIcon);
+        const icon = document.createElement('i');
+        icon.classList.add('fa-solid');
+        icon.classList.add(iconName);
+        icon.classList.add('tab-icon');
+        icon.id = iconId;
+        tab.appendChild(icon);
 
-        const inboxLabel = document.createElement('p');
-        inboxLabel.innerHTML = 'Inbox';
-        inboxLabel.classList.add('tab-label');
-        inboxTab.appendChild(inboxLabel);
+        const label = document.createElement('p');
+        label.innerHTML = labelText;
+        label.classList.add('tab-label');
+        tab.appendChild(label);
 
-        return [inboxTab];
+        return tab;
     }
 }
