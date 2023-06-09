@@ -15,5 +15,20 @@ body {
 .navbar {
     background-color: var(--primary-blue);
     width: 100vw;
-    height: 35px;
+    height: 40px;
+    display: flex;
+    padding: 0 50px 0 50px;
+    align-items: center;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    color: var(--primary-light);
+}
+
+.icon:hover {
+    cursor: pointer;
 }
