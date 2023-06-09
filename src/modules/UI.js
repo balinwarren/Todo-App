@@ -49,18 +49,24 @@ export default class UI {
         const sideBar = document.createElement('div');
         sideBar.classList.add('side-bar');
 
-        const inboxTab = UI.createTab('fa-inbox', 'inbox-icon', 'Inbox');
+        const inboxTab = UI.createTab('fa-solid','fa-inbox', 'inbox-icon', 'Inbox');
         sideBar.appendChild(inboxTab);
+
+        const todayTab = UI.createTab('fa-solid', 'fa-calendar-day', 'today-icon', 'Today');
+        sideBar.appendChild(todayTab);
+
+        const weekTab = UI.createTab('fa-solid', 'fa-calendar-week', 'week-icon', 'This Week');
+        sideBar.appendChild(weekTab);
 
         return sideBar;
     }
 
-    static createTab (iconName, iconId, labelText){
+    static createTab (iconClass, iconName, iconId, labelText){
         const tab = document.createElement('div');
         tab.classList.add('tab');
 
         const icon = document.createElement('i');
-        icon.classList.add('fa-solid');
+        icon.classList.add(iconClass);
         icon.classList.add(iconName);
         icon.classList.add('tab-icon');
         icon.id = iconId;
