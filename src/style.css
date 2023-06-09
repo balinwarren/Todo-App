@@ -2,6 +2,7 @@
     --primary-blue: #0F52BA;
     --primary-light: #FFFFFF;
     --secondart-light: #f5f6f7;
+    --tertiery-light: #cbced4;
     --primary-dark: #18191A;
     --secondary-dark: #242526;
 
@@ -54,4 +55,21 @@ body {
     background-color: var(--secondart-light);
     height: 100%;
     width: 20%;
+}
+
+.tab {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 10px;
+    margin: 0 40px 0 40px;
+}
+
+.tab:hover {
+    cursor: pointer;
+}
+
+#inbox-icon {
+    color: #FFC000;
 }

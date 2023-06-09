@@ -49,6 +49,28 @@ export default class UI {
         const sideBar = document.createElement('div');
         sideBar.classList.add('side-bar');
 
+        let tabs = UI.createTabs();
+        tabs.forEach(element => sideBar.appendChild(element));
+
         return sideBar;
+    }
+
+    static createTabs (){
+        const inboxTab = document.createElement('div');
+        inboxTab.classList.add('tab');
+
+        const inboxIcon = document.createElement('i');
+        inboxIcon.classList.add('fa-solid');
+        inboxIcon.classList.add('fa-inbox');
+        inboxIcon.classList.add('tab-icon');
+        inboxIcon.id = "inbox-icon";
+        inboxTab.appendChild(inboxIcon);
+
+        const inboxLabel = document.createElement('p');
+        inboxLabel.innerHTML = 'Inbox';
+        inboxLabel.classList.add('tab-label');
+        inboxTab.appendChild(inboxLabel);
+
+        return [inboxTab];
     }
 }
