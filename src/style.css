@@ -1,8 +1,11 @@
 :root {
-    --primary-blue: #0F52BA;
+    --primary-violet: #11009E;
+    --secondary-violet: #4942E4;
+    --tertiary-violet: #8696FE;
+    --quaternary-violet: #C4B0FF;
     --primary-light: #FFFFFF;
     --secondart-light: #f5f6f7;
-    --tertiery-light: #cbced4;
+    --tertiery-light: #E5E4E2;
     --primary-dark: #18191A;
     --secondary-dark: #242526;
 
@@ -21,7 +24,7 @@ body {
 /* Navbar */
 
 .navbar {
-    background-color: var(--primary-blue);
+    background-color: var(--primary-violet);
     width: 100%;
     height: 40px;
     display: flex;
@@ -52,7 +55,7 @@ body {
 .side-bar {
     display: flex;
     flex-direction: column;
-    background-color: var(--secondart-light);
+    background-color: var(--secondary-light);
     height: 100%;
     width: 20%;
 }
@@ -63,7 +66,9 @@ body {
     align-items: flex-start;
     font-family: Arial, Helvetica, sans-serif;
     gap: 10px;
-    margin: 20px 40px -5px 40px;
+    margin: 10px 40px -5px 40px;
+    border-radius: 8px;
+    padding: 10px;
 }
 
 .tab > p {
@@ -73,16 +78,21 @@ body {
 
 .tab:hover {
     cursor: pointer;
+    background-color: var(--tertiery-light);
+}
+
+.tab.active {
+    background-color: var(--tertiery-light);
 }
 
 #inbox-icon {
-    color: #FFC000;
+    color: var(--secondary-violet);
 }
 
 #today-icon {
-    color: #50C878;
+    color: var(--tertiary-violet);
 }
 
 #week-icon {
-    color: #CF9FFF;
+    color: var(--quaternary-violet);
 }

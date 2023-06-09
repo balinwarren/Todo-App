@@ -1,6 +1,6 @@
 export default class UI {
 
-    static loadHome (){
+    static createHome (){
         UI.createHeader();
         UI.createMain();
     }
@@ -49,19 +49,19 @@ export default class UI {
         const sideBar = document.createElement('div');
         sideBar.classList.add('side-bar');
 
-        const inboxTab = UI.createTab('fa-solid','fa-inbox', 'inbox-icon', 'Inbox');
+        const inboxTab = UI.createTab('fa-solid','fa-inbox', 'inbox-icon', 'Inbox', true);
         sideBar.appendChild(inboxTab);
 
-        const todayTab = UI.createTab('fa-solid', 'fa-calendar-day', 'today-icon', 'Today');
+        const todayTab = UI.createTab('fa-solid', 'fa-calendar-day', 'today-icon', 'Today', false);
         sideBar.appendChild(todayTab);
 
-        const weekTab = UI.createTab('fa-solid', 'fa-calendar-week', 'week-icon', 'This Week');
+        const weekTab = UI.createTab('fa-solid', 'fa-calendar-week', 'week-icon', 'This Week', false);
         sideBar.appendChild(weekTab);
 
         return sideBar;
     }
 
-    static createTab (iconClass, iconName, iconId, labelText){
+    static createTab (iconClass, iconName, iconId, labelText, isActive){
         const tab = document.createElement('div');
         tab.classList.add('tab');
 
@@ -76,7 +76,11 @@ export default class UI {
         label.innerHTML = labelText;
         label.classList.add('tab-label');
         tab.appendChild(label);
-
+        
+        if (isActive) {
+            tab.classList.add('active');
+        }
+        
         return tab;
     }
 }

@@ -6,4 +6,4 @@ fontAwesome.src = "https://kit.fontawesome.com/ab87087bfd.js";
 fontAwesome.crossorigin = "anonymous";
 document.head.appendChild(fontAwesome);
 
-document.addEventListener("DOMContentLoaded", UI.loadHome);
+document.addEventListener("DOMContentLoaded", UI.createHome);
