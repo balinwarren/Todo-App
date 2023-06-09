@@ -58,6 +58,10 @@ export default class UI {
         const weekTab = UI.createTab('fa-solid', 'fa-calendar-week', 'week-icon', 'This Week', false);
         sideBar.appendChild(weekTab);
 
+        const projectsTab = UI.createTab('fa-solid', 'fa-caret-down', 'project-icon', 'Projects', false);
+        projectsTab.id = 'projects-tab';
+        sideBar.appendChild(projectsTab);
+
         return sideBar;
     }
 
@@ -80,7 +84,7 @@ export default class UI {
         if (isActive) {
             tab.classList.add('active');
         }
-        
+
         return tab;
     }
 }
