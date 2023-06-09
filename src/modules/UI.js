@@ -2,6 +2,7 @@ export default class UI {
 
     static loadHome (){
         UI.createHeader();
+        UI.createMain();
     }
 
     static createHeader(){
@@ -33,5 +34,21 @@ export default class UI {
         plusIcon.classList.add('fa-plus');
         plusIcon.classList.add('icon');
         leftIcons.appendChild(plusIcon);
+    }
+
+    static createMain (){
+        const mainScreen = document.createElement('div');
+        mainScreen.classList.add('main-screen');
+
+        mainScreen.appendChild(UI.createSideBar());
+
+        document.body.appendChild(mainScreen);
+    }
+
+    static createSideBar (){
+        const sideBar = document.createElement('div');
+        sideBar.classList.add('side-bar');
+
+        return sideBar;
     }
 }
