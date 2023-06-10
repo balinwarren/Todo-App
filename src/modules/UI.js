@@ -41,10 +41,12 @@ export default class UI {
         mainScreen.classList.add('main-screen');
 
         mainScreen.appendChild(UI.createSideBar());
+        mainScreen.appendChild(UI.createTaskList());
 
         document.body.appendChild(mainScreen);
     }
 
+    //sidebar dom construction
     static createSideBar (){
         const sideBar = document.createElement('div');
         sideBar.classList.add('side-bar');
@@ -86,5 +88,19 @@ export default class UI {
         }
 
         return tab;
+    }
+
+    //task screen dom construction
+    static createTaskList (){
+        const taskList = document.createElement('div');
+        taskList.classList.add('task-list-container');
+
+        const title = document.createElement('p');
+        title.innerHTML = 'Inbox';
+        title.classList.add('title-text');
+        title.classList.add('task-list-item');
+        taskList.appendChild(title);
+
+        return taskList;
     }
 }

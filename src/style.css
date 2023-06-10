@@ -110,3 +110,24 @@ body {
     cursor: pointer;
     background-color: var(--secondary-light);
 }
+
+/* Task List Screen */
+.task-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    height: 100%;
+}
+
+.task-list-container > p {
+    font-family: arial;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.task-list-container > .task-list-item {
+    margin: 30px;
+}
