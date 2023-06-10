@@ -121,7 +121,7 @@ body {
 }
 
 .task-list-container > p {
-    font-family: arial;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 28px;
     font-weight: bold;
     margin: 0;
@@ -129,5 +129,25 @@ body {
 }
 
 .task-list-container > .task-list-item {
-    margin: 30px;
+    margin: 30px 30px -30px 30px;
+}
+
+.task-button {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+    width: 115px;
+}
+
+.task-button:hover {
+    cursor: pointer;
+    background-color: var(--secondary-light);
+}
+
+.label {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }

@@ -101,6 +101,28 @@ export default class UI {
         title.classList.add('task-list-item');
         taskList.appendChild(title);
 
+        taskList.appendChild(UI.createAddTask());
+
         return taskList;
+    }
+
+    //create add task button
+    static createAddTask (){
+        const add = document.createElement('div');
+        add.classList.add('task-button');
+        add.classList.add('task-list-item');
+
+        const plusIcon = document.createElement('i');
+        plusIcon.classList.add('fa-solid');
+        plusIcon.classList.add('fa-plus');
+        plusIcon.classList.add('plus-icon');
+        add.appendChild(plusIcon);
+
+        const label = document.createElement('p');
+        label.innerHTML = "Add Task";
+        label.classList.add('label');
+        add.appendChild(label);
+
+        return add;
     }
 }
